@@ -75,6 +75,12 @@ cache-clear:
 	docker compose exec app composer clear-cache
 	@make optimize-clear
 	docker compose exec app php artisan event:clear
+npm:
+	@make npm-install
+npm-install:
+	docker-compose exec web npm install
+npm-dev:
+	docker-compose exec web npm run dev
 db:
 	docker compose exec db bash
 sql:
@@ -86,3 +92,4 @@ ide-helper:
 	docker compose exec app php artisan ide-helper:generate
 	docker compose exec app php artisan ide-helper:meta
 	docker compose exec app php artisan ide-helper:models --nowrite
+
