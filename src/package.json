@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@material-ui/core": "^4.12.4",
-        "n": "^9.0.1"
+        "n": "^9.0.1",
+        "react-router-dom": "^5.0.0"
     }
 }
