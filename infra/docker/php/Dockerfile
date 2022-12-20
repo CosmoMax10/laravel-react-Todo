@@ -14,6 +14,8 @@ ENV TZ=UTC \
 
 COPY --from=composer:2.4 /usr/bin/composer /usr/bin/composer
 
+EXPOSE 5173
+
 RUN apt-get update \
   && apt-get -y install --no-install-recommends \
     locales \
